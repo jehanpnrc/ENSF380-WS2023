@@ -30,6 +30,7 @@ public class MyOutput {
         System.out.println("Action: " + mov.getAction());
         System.out.println("Direction: "+ mov.getDirection());
 
+<<<<<<< HEAD
         Sensor sen = dataLine1.getSensor();
         System.out.println("Sensor: " + sen.getSensor());
 
@@ -56,6 +57,25 @@ public class MyOutput {
         //String[] badData = getBadData();
         //RobotDataRecord badDataFile = new RobotDataRecord(badData);*/
     }
+=======
+            //Test cloning: correct deep copies should equate to false
+            //Remember to clone each object that is contained within another object
+            //Hint: You cannot use the built-in ArrayList clone- think about how to break the link and clone the elements
+            System.out.println("\nTest all levels of cloning:");
+            RobotDataRecord dataFileCopy = (RobotDataRecord)dataFile.clone();
+            System.out.println(dataFileCopy == dataFile);
+            System.out.println(dataFileCopy.getDataRecord() == dataFile.getDataRecord());
+            System.out.println(dataFileCopy.getLine(0) == dataFile.getLine(0));            
+            System.out.println(dataFileCopy.getLine(0).getMovement() == dataFile.getLine(0).getMovement());
+            System.out.println(dataFileCopy.getLine(0).getSensor() == dataFile.getLine(0).getSensor());
+            
+            //Example of testing invalid input- modify the data as needed to try various invalid scenarios
+            // If you want to check IllegalArgumentExceptions being thrown, you can instantiate RobotDataLine, Movement, and Sensor. Bad data lines should be skipped by RobotDataRecord.
+            System.out.println("Uncomment below to test exceptions...");
+            //String[] badData = getBadData();
+            //RobotDataRecord badDataFile = new RobotDataRecord(badData);
+	}
+>>>>>>> 47bb91b4dbb38e8fcd3cd5d69d3750a230162d95
 
 
     // Contains example data
