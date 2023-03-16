@@ -14,7 +14,7 @@ public class ManageAccess {
 	public ManageAccess(String[] logFile) throws IllegalArgumentException {
 		for (int i=0; i < logFile.length; i++) {
 			var logLine = new AccessLog(logFile[i]);
-			completeLog[i] = logLine
+			completeLog[i] = logLine;
 		}
 	}
 

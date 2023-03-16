@@ -4,7 +4,7 @@ Licensed under GPL v3
 See LICENSE.txt for more information.
 */
 
-package edu.calgary.oop;
+package edu.ucalgary.oop;
 
 import java.util.regex.*;
 

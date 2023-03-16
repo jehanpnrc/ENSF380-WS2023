@@ -52,6 +52,7 @@ public class AroundTheWorld {
         System.out.println();
 
         // Retrieve the array of Trip objects from Itinerary
+
         var array = myItinerary.getTrips();
 
         System.out.println("** Demonstrate fmtString");
@@ -62,6 +63,9 @@ public class AroundTheWorld {
         String[] tmp = {"2023-07-10", "2023-08-11", "Vaduz", "Liechtenstein"};
         Trip aTrip = new Trip(tmp);
         System.out.println(aTrip.formatTrip());
+
+        System.out.println();
+
 
         System.out.println("** Demonstrate getMonth");
         System.out.println(aTrip.getMonth(tmp[0]));
@@ -80,7 +84,7 @@ public class AroundTheWorld {
 
         System.out.println("** Demonstrate content of byDate");
 	var dateArray = myItinerary.byDate();
-	for (int i=0; i<dateArray.length; i++) { // i is years - 2021-2023 
+	for (int i=0; i<dateArray.length; i++) { // i is years - 2021-2023
 		for (int j=0; j<dateArray[i].length; j++) { // j is months, 0-11
                         // Printing every entry in the array would give 720
                         // lines. We only print the first entry in the
@@ -89,6 +93,13 @@ public class AroundTheWorld {
 			dateArray[i][j][0]);
 		}
 	}
+
+    //Testing testing
+        System.out.printf("Testing\n");
+        System.out.printf("dateArray[%d][%d][%d] = %s\n", 0,11,1,
+                dateArray[0][11][1]);
+        System.out.printf("dateArray[%d][%d][%d] = %s\n", 0,11,2,
+                dateArray[0][11][2]);
 
     }
 
